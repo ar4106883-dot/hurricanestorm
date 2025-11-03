@@ -1,0 +1,25 @@
+{
+  "name": "raincloud-board",
+  "version": "1.0.0",
+  "description": "Raincloud AI Board of Directors - Multi-AI decision making system",
+  "main": "index.js",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step needed'",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "ai",
+    "board",
+    "multi-agent",
+    "decision-making"
+  ],
+  "author": "Raincloud",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}

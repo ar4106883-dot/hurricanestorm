@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌧️ Raincloud - AI Board of Directors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🌧️ Raincloud</h1>
+            <p class="subtitle">Your AI Board of Directors</p>
+            <div class="cost-indicator">
+                <span id="providerStatus">Loading providers...</span>
+            </div>
+        </header>
+
+        <!-- Board Members Section -->
+        <section class="board-section">
+            <h2>Board Members</h2>
+            <div class="board-grid" id="boardGrid">
+                <!-- Board members will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- Proposal Submission -->
+        <section class="proposal-section">
+            <h2>Submit Proposal to the Board</h2>
+            <div class="proposal-form">
+                <textarea 
+                    id="proposalText" 
+                    placeholder="Enter your proposal or question for the board...&#10;&#10;Example: 'Should we expand into the European market? We have $500K budget and 6 months timeline.'"
+                    rows="6"
+                ></textarea>
+                
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" id="includeChairman" checked>
+                        Include Chairman's Final Decision
+                    </label>
+                    <label>
+                        <input type="checkbox" id="streamResponses" checked>
+                        Stream Responses (Real-time)
+                    </label>
+                </div>
+
+                <button id="submitBtn" class="submit-btn">
+                    <span class="btn-text">Submit to Board</span>
+                    <span class="btn-loader" style="display:none;">⏳ Processing...</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Board Discussion Results -->
+        <section class="discussion-section" id="discussionSection" style="display:none;">
+            <h2>Board Discussion</h2>
+            <div class="discussion-container" id="discussionContainer">
+                <!-- Responses will appear here -->
+            </div>
+        </section>
+
+        <!-- Settings Panel -->
+        <section class="settings-section">
+            <details>
+                <summary>⚙️ Settings & Provider Info</summary>
+                <div class="settings-content">
+                    <div id="providerInfo" class="provider-info">
+                        <!-- Provider information will be loaded here -->
+                    </div>
+                    <div class="settings-actions">
+                        <button onclick="testConnection()" class="secondary-btn">Test API Connection</button>
+                        <button onclick="clearHistory()" class="secondary-btn">Clear Discussion History</button>
+                    </div>
+                </div>
+            </details>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Powered by multiple AI providers | Vendor-independent | Cost-optimized</p>
+            <p class="small">Current session: <span id="sessionCost">$0.00</span> estimated cost</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
